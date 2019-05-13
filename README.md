@@ -11,14 +11,15 @@ python setup.py install
 
 
 ## Environment Variables
+
+```
 AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
 AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
 AWS_REGION=<AWS_REGION>
-
 CF_API_EMAIL=<Cloudflare Email>
 CF_API_KEY=<Cloudflare Global API Key>
 CF_API_CERTKEY=<Cloudflare Origin CA Key>
-
+```
 
 ## Usage
 
