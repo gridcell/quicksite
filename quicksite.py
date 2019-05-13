@@ -1,14 +1,15 @@
 import json
 import os
 
-import boto3
 import botocore
 import botocore.loaders
 import botocore.regions
+import requests
+
+import boto3
 import click
 import CloudFlare
 import magic
-import requests
 
 s3 = boto3.resource("s3")
 cf = CloudFlare.CloudFlare()
@@ -134,7 +135,6 @@ def deploy(domain, subdomain):
     bucket = create_bucket(bucket_name)
     create_bucket_website(bucket_name)
     create_bucket_policy(bucket_name)
-    # upload_files_to_s3(bucket)
 
     # Setup Cloudflare
     url = get_endpoint_for_s3_bucket(bucket_name, AWS_REGION)
